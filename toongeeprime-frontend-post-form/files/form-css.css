@@ -1,0 +1,23 @@
+/**
+ *	FORM STYLES
+ */
+
+.prel{position:relative;}
+.p-abso{position:absolute;}
+.grid{display:grid;}
+.hide,#menu-item-featured-image{display:none!important;}
+
+.akwform-sides{gap:50px;}
+.prime2g_form .flds{width:100%;max-width:100%;}
+.prime2g_form label{display:block;margin-top:10px;}
+.prime2g_form #submit{margin-top:30px;}
+#post_ft_image{margin-top:30px;min-height:200px;border:dashed 4px #999;cursor:pointer;padding:0 10px 20px;text-align:center;}
+#post_ft_image:hover{border-color:skyblue;}
+#tinymce .mce-widget button, #prime2g_fe_post_form .mce-container-body button,
+#prime2g_fe_post_form .quicktags-toolbar input{background:none;color:inherit;}
+
+.post_url .p-abso{top:0;right:0;}
+
+@media(min-width:801px) {
+	.akwform-sides{grid-template-columns:2fr 1fr;}
+}
