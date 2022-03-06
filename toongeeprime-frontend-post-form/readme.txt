@@ -8,7 +8,7 @@ Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Simple plugin to create a front-end form for adding and editing Posts.
+WordPress plugin to create a front-end form for adding and editing Posts.
 
 == Description ==
 

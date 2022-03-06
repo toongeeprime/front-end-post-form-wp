@@ -12,7 +12,7 @@
  * Plugin Name:		ToongeePrime Frontend Post Form
  * Description:		Creates a front-end form for adding and editing Posts using a shortcode.
  * Version:		0.1
- * Plugin URI:		https://github.com/toongeeprime/wp-frontend-post-form
+ * Plugin URI:		https://github.com/toongeeprime/frontend-post-form-wp
  * Author:		ToongeePrime
  * Author URI:		https://github.com/toongeeprime/
  * Text Domain:		toongeeprime-frontend-post-form
