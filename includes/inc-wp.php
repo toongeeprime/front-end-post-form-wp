@@ -11,7 +11,7 @@
 add_action( 'admin_bar_menu', 'akw_admintoolbar_menu', 100 );
 function akw_admintoolbar_menu( $admin_bar ) {
 
-if ( is_admin() || ! is_single() ) return;
+if ( is_admin() || ! is_singular( 'post' ) ) return;
 
 $admin_bar->add_menu( array(
 	'id'	=>	'toongeePrime_bar_menu',
