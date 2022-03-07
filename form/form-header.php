@@ -45,7 +45,7 @@ function toongeeprime_FEForm_header() {
 
 	if ( ! isset( $_REQUEST[ '_the-nonce' ] ) || ! wp_verify_nonce( $_POST[ '_the-nonce' ], 'prime2g_nonce' ) )
 		{
-			return;
+			echo 'Security omission'; exit;
 		}
 
 
