@@ -4,8 +4,8 @@
  *	RUN THE FORM HEADER
  */
 
-add_action( 'template_redirect', 'toongeeprime_FEForm_headers' );
-function toongeeprime_FEForm_headers() {
+add_action( 'template_redirect', 'toongeeprime_FEForm_header' );
+function toongeeprime_FEForm_header() {
 
 	// Return if any of these
 	if ( is_admin() || ! is_page() ) return;

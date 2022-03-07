@@ -15,6 +15,21 @@ function toongeeprime_post_edit_url_params() {
 
 
 
+
+/**
+ *	Determine if current page is form Page
+ */
+function toongeeprime_is_form_page() {
+
+	// Return if any of these
+	if ( is_admin() || ! is_page() ) return;
+
+	return	( toongeePrime_formPage( 'ID', 'publish' ) === get_the_ID() );
+
+}
+
+
+
 /**
  *	Front-end Edit Post URL
  */

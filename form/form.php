@@ -3,7 +3,7 @@
 /**
  *	THE POSTING FORM
  *
- *	Done in HTML for simplicity
+ *	In HTML for simplicity
  */
 
 /**
@@ -15,7 +15,7 @@ function toongeeprime_FEPost_form_runner() {
 
 	// Form should only work on pages
 	if ( ! is_page() ) {
-		echo 'Sorry, this form will not work here. It must be set on a page.';
+		echo 'Sorry, this form will not work here. It must be set on a Page.';
 		return;
 	}
 

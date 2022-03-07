@@ -1,10 +1,17 @@
 <?php defined( 'ABSPATH' ) || exit;
 
 /**
- *	Add form stylesheet file to the end of the queue
+ *	LOAD FILES
+ */
+
+/**
+ *	Add form stylesheet file to the queue
  */
 add_action( 'wp_enqueue_scripts', 'toongeePrime_fe_form_css_enqueue' );
 function toongeePrime_fe_form_css_enqueue() {
+
+	// return if Not on form Page
+	if ( ! toongeeprime_is_form_page() ) return;
 
     $dir	=	plugin_dir_url( __FILE__ );
     wp_enqueue_style( 'toongeePrime_formCSS', $dir . 'files/form-css.css' );
@@ -12,8 +19,14 @@ function toongeePrime_fe_form_css_enqueue() {
 }
 
 
+/**
+ *	Add form script files to footer
+ */
 add_action( 'wp_footer', 'toongeePrime_fe_form_js' );
 function toongeePrime_fe_form_js() {
+
+	// return if Not on form Page
+	if ( ! toongeeprime_is_form_page() ) return;
 
     $dir	=	plugin_dir_url( __FILE__ );
     wp_enqueue_script( 'toongeePrime_formJS', $dir . 'files/form-js.js' );
