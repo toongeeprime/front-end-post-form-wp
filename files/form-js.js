@@ -18,3 +18,12 @@ let akselbx	=	document.getElementById( "the_status" ),
 
 }
 akw_pubBtnTxt();
+
+
+
+// Dismiss form notification
+let pr2gNotif	=	document.getElementById( 'prime2g_pstatus_notice' );
+
+pr2gNotif.addEventListener( 'click', ()=>{
+	pr2gNotif.classList.add( 'dismiss' );
+} );

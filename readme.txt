@@ -3,7 +3,7 @@ Donate link: https://akawey.com/donate/
 Tags: form, post, frontend, add, edit
 Requires at least: 5.5
 Tested up to: 5.9
-Stable tag: 1.1
+Stable tag: 1.1.5
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -24,6 +24,10 @@ Works on only one page at a time throughout a website.
 
 == Changelog ==
 
+= 1.1.5 =
+
+Added dismissible notification messages to help user know the status of their posting
+
 = 1.1 =
 
 Reworked the form for better output
@@ -35,5 +39,6 @@ Added toongeeprime_is_form_page() function for some conditional checks
 Conditional CSS and JS enqueues
 
 = 1.0 =
+
 * First release
 

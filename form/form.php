@@ -89,6 +89,21 @@ function toongeeprime_FEPost_form_runner() {
 $form	=	'<div id="prime2g_feformWrap" class="prime2g_form prel">';
 $form	.=	'<form id="prime2g_fe_post_form" class="prime2g-forms" name="prime2g_fe_post_form" method="post" action="" enctype="multipart/form-data">';
 
+	if ( isset( $_GET[ 'pstatus' ] ) ) {
+		$pStat	=	$_GET[ 'pstatus' ];
+
+		if ( $pStat == 'published' ) {
+			$form	.=	'<p id="prime2g_pstatus_notice" title="Dismiss">Your new Post has been Published</p>';
+		}
+		if ( $pStat == 'draft' ) {
+			$form	.=	'<p id="prime2g_pstatus_notice" title="Dismiss">Your Draft has been Saved</p>';
+		}
+		if ( $pStat == 'updated' ) {
+			$form	.=	'<p id="prime2g_pstatus_notice" title="Dismiss">Your Post has been Updated</p>';
+		}
+
+	}
+
 	if ( $pStatus ) {
 		$form	.=	'<p id="poststatus" class="prel">';
 		$form	.=	'Status: <span>';

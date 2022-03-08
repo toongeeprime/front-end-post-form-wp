@@ -95,8 +95,25 @@ function toongeeprime_FEForm_header() {
 		// Redirect to form Page editing the current post
 		$fPageName	=	toongeePrime_formPage( 'post_name' );
 		$fPageURL	=	home_url( '/' . $fPageName . '/' );
+		$redir		=	$fPageURL . '?pid=' . $pid . '&edit';
 
-		wp_safe_redirect( $fPageURL . '?pid=' . $pid . '&edit' );
+
+		if ( get_post_status( $pid ) == 'draft' ) {
+
+			wp_safe_redirect( $redir . '&pstatus=draft' );
+
+		}
+		elseif ( $thepID == 0 ) {
+
+			wp_safe_redirect( $redir . '&pstatus=published' );
+
+		}
+		else {
+
+			wp_safe_redirect( $redir . '&pstatus=updated' );
+
+		}
+
 		exit;
 
 	}
