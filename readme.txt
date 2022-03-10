@@ -3,7 +3,7 @@ Donate link: https://akawey.com/donate/
 Tags: form, post, frontend, add, edit
 Requires at least: 5.5
 Tested up to: 5.9
-Stable tag: 1.1.5
+Stable tag: 1.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -23,6 +23,16 @@ Works on only one page at a time throughout a website.
 
 
 == Changelog ==
+
+= 1.2 =
+
+Added an admin prompt to add the shortcode when it has not been used
+
+Added Post State to the Pages list to help identify Page with shortcode == "Front-end Posts Page"
+
+Added an admin warning when more than one page is using the shortcode
+
+Notices are dismissible
 
 = 1.1.5 =
 
