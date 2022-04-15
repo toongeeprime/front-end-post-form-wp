@@ -39,6 +39,15 @@
 define( 'PRIME_FE_POST_FORM', WP_PLUGIN_DIR . '/toongeeprime-frontend-post-form/' );
 
 
+
+/**
+ *		PLUGIN DATA
+ */
+function primefe_plugin_data() {
+	return get_plugin_data( __FILE__ );
+}
+
+
 /**
  *	REQUIRE FILES
  *	Contains enqueues and links all plugin files 
