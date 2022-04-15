@@ -56,14 +56,13 @@ function toongeeprime_FEPost_form_runner() {
 
 
 		// If post object does not exist
-		if ( ! is_object( $pToEdit ) || ( get_post_type( $pToEdit ) != 'post' ) ) {
+		if ( ! is_object( $pToEdit ) || ( $pToEdit->post_type != 'post' ) ) {
 			return 'Your desired post is non-existent';
 		}
 
 
 		// Get post Status
-		// $pStatus	=	get_post_status( $pid );
-		$pStatus	=	toongeeprime_post_field( 'post_status', $pToEdit, 'return' ); // since post object is in memory
+		$pStatus	=	toongeeprime_post_field( 'post_status', $pToEdit, 'return' );
 
 		// Get Tags
 		$postTags	=	wp_get_post_tags( $pid, array( 'fields' => 'names' ) );
@@ -85,7 +84,6 @@ function toongeeprime_FEPost_form_runner() {
 	/**
 	 *		The Form HTML
 	 */
-
 $form	=	'<div id="prime2g_feformWrap" class="prime2g_form prel">';
 $form	.=	'<form id="prime2g_fe_post_form" class="prime2g-forms" name="prime2g_fe_post_form" method="post" action="" enctype="multipart/form-data">';
 

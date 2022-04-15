@@ -49,17 +49,17 @@ $pid	=	get_the_ID();
 /**
  *	Output Post Field
  */
-function toongeeprime_post_field( $field = '', $pToEdit = null, $echo = '' ) {
+function toongeeprime_post_field( $field = '', $pToEdit = null, $return = '' ) {
 
 	// If a post object exists to edit
 	if ( is_object( $pToEdit ) ) {
 
 		// Display field value
-		if ( $echo == 'return' ) {
-			return $pToEdit->$field;
+		if ( $return == 'return' ) {
+			return htmlspecialchars( $pToEdit->$field );
 		}
 		else {
-			echo $pToEdit->$field;
+			echo htmlspecialchars( $pToEdit->$field );
 		}
 
 	}
