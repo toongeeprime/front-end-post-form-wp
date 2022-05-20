@@ -37,7 +37,7 @@ function toongeeprime_FEPost_form_runner() {
 	}
 
 
-	// Form should only work on form page
+	// Form should only work on already-set form page
 	if ( $fPageID && ! $formPage ) {
 		return 'You already have a page for this form. <a href="'. get_page_link( $fPageID ) .'">Please click here to go to the page</a>.';
 	}
@@ -82,9 +82,23 @@ function toongeeprime_FEPost_form_runner() {
 
 
 	/**
+	 *		Variables
+	 */
+	$pType	=	isset( $_GET[ 'ptype' ] ) ? '' : 'Post';
+
+	if ( $pToEdit ) {
+		$heading1	=	'<p class="editinginfo"><strong>You are editing: ' . $pToEdit->post_title . '</strong></p>';
+	}
+	else {
+		$heading1	=	'<p class="editinginfo"><strong>Add a New ' . $pType . '</strong></p>';
+	}
+
+
+	/**
 	 *		The Form HTML
 	 */
-$form	=	'<div id="prime2g_feformWrap" class="prime2g_form prel">';
+$form	=	$heading1;
+$form	.=	'<div id="prime2g_feformWrap" class="prime2g_form prel">';
 $form	.=	'<form id="prime2g_fe_post_form" class="prime2g-forms" name="prime2g_fe_post_form" method="post" action="" enctype="multipart/form-data">';
 
 	if ( isset( $_GET[ 'pstatus' ] ) ) {
@@ -152,14 +166,13 @@ $form	.=	'<div class="fld-set content">';
 
 
 $form	.=	'<label for="post_content">Post Content</label>';
-$theContent = toongeeprime_post_field( 'post_content', $pToEdit, 'return' );
+$theContent	=	html_entity_decode( toongeeprime_post_field( 'post_content', $pToEdit, 'return' ) );
 
 	$set_edtr	=	array(
 		'tabindex'		=>	1,
 		'textarea_rows'	=>	10,
 		'editor_class'	=>	'flds',
-		'drag_drop_upload'	=>	true,
-		'quicktags'		=>	true
+		'drag_drop_upload'	=>	true
 	);
 
 $form	.=	toongeePrime_get_wp_editor( $theContent, 'post_content', $set_edtr );

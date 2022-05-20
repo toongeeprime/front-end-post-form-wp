@@ -8,8 +8,8 @@
 /**
  *	WP Admin Bar Menu
  */
-add_action( 'admin_bar_menu', 'akw_admintoolbar_menu', 100 );
-function akw_admintoolbar_menu( $admin_bar ) {
+add_action( 'admin_bar_menu', 'primeFE_admintoolbar_menu', 100 );
+function primeFE_admintoolbar_menu( $admin_bar ) {
 
 if ( is_admin() || ! is_singular( 'post' ) ) return;
 
