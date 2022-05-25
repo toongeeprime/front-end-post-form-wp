@@ -18,7 +18,7 @@ animation:lilPop 1 1s;overflow:hidden;transition:all 0.2s;}
 #post_ft_image{margin-top:30px;min-height:200px;border:dashed 4px #999;cursor:pointer;padding:0 10px 20px;text-align:center;}
 #post_ft_image:hover{border-color:skyblue;}
 #tinymce .mce-widget button, #prime2g_fe_post_form .mce-container-body button,
-#prime2g_fe_post_form .quicktags-toolbar input{background:none;color:inherit;}
+#prime2g_fe_post_form .quicktags-toolbar input{background:none;color:inherit;width:inherit;}
 
 .post_url .p-abso{top:0;right:0;}
 

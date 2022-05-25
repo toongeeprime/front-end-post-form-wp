@@ -18,8 +18,8 @@
  * Text Domain:		toongeeprime-frontend-post-form
  * Domain Path:		/languages/
  * Requires PHP:	7.0
- * Requires at least:	5.5
- * Tested up to:	5.9
+ * Requires at least:	5.8
+ * Tested up to:	6.0
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
